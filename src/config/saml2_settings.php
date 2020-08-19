@@ -32,7 +32,7 @@ return $settings = array(
      * Laravel 5.2 will need a group which includes StartSession
      */
     'routesMiddleware' => [],
-
+    //'routesMiddleware' => ['saml'],
     /**
      * Indicates how the parameters will be
      * retrieved from the sls request for signature validation
@@ -68,4 +68,5 @@ return $settings = array(
      * it used in the routes definition.
      */
      // 'saml2_controller' => '',
+     // 'saml2_controller' => 'App\Http\Controllers\AuthController',
 );

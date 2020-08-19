@@ -10,12 +10,10 @@ use PHPUnit\Framework\TestCase;
 class Saml2AuthTest extends TestCase
 {
 
-
-    public function tearDown()
+    protected function tearDown():void
     {
         m::close();
     }
-
 
     public function testIsAuthenticated()
     {
@@ -33,7 +31,10 @@ class Saml2AuthTest extends TestCase
         $auth = m::mock('OneLogin\Saml2\Auth');
         $saml2 = new Saml2Auth($auth);
         $auth->shouldReceive('login')->once();
-        $saml2->login();
+        $obj = $saml2->login();
+
+        //not sure how to test this
+        $this->assertNull($obj);
     }
 
     public function testLogout()
@@ -49,7 +50,10 @@ class Saml2AuthTest extends TestCase
         $auth->shouldReceive('logout')
             ->with($expectedReturnTo, [], $expectedNameId, $expectedSessionIndex, $expectedStay, $expectedNameIdFormat, $expectedNameIdNameQualifier)
             ->once();
-        $saml2->logout($expectedReturnTo, $expectedNameId, $expectedSessionIndex, $expectedNameIdFormat, $expectedStay, $expectedNameIdNameQualifier);
+        $obj = $saml2->logout($expectedReturnTo, $expectedNameId, $expectedSessionIndex, $expectedNameIdFormat, $expectedStay, $expectedNameIdNameQualifier);
+
+        //not sure how to test this
+        $this->assertNull($obj);
     }
 
 
