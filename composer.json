@@ -1,5 +1,5 @@
 {
-    "name": "aacotroneo/laravel-saml2",
+    "name": "macgngsta/laravel-saml2",
     "description": "A Laravel package for Saml2 integration as a SP (service provider) for multiple IdPs, based on OneLogin toolkit which is much more lightweight than simplesamlphp.",
     "keywords": [
         "laravel",
@@ -7,9 +7,9 @@
         "saml2",
         "onelogin"
     ],
-    "homepage": "https://github.com/aacotroneo/laravel-saml2",
+    "homepage": "https://github.com/macgngsta/laravel-saml2",
     "license": "MIT",
-    "version": "3.0.1",
+    "version": "3.0.2",
     "authors": [
         {
             "name": "aacotroneo",
